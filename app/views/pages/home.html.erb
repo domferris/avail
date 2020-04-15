@@ -1,0 +1,26 @@
+<% if user_signed_in? %>
+  <%= render 'shared/user_location_map' %>
+
+  <main class="home-container">
+    <div class="avail-toggle">
+        <% if current_user.availability %>
+          <h3>Available</h3>
+          <%= link_to toggle_availability_path(current_user), method: :patch do %>
+            <%= icon('fa', 'toggle-on toggle-avail') %>
+          <% end %>
+        <% else %>
+          <h3>Busy</h3>
+          <%= link_to toggle_availability_path(current_user), method: :patch do %>
+            <%= icon('fa', 'toggle-off toggle-busy') %>
+          <% end %>
+        <% end %>
+    </div>
+
+    <%= link_to new_hangout_path do %>
+      <button class="btn-avail-primary">Schedule hangout</button>
+    <% end %>
+  </main>
+<% else %>
+  <p>please log in</p>
+<% end %>
+

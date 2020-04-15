@@ -1,0 +1,28 @@
+.mobile-navbar {
+  background: linear-gradient(rgb(175, 175, 175), rgb(95, 95, 95));
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  padding: 12px 8px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      display: inline;
+      font-size: 2.5em;
+
+      a {
+        color: rgb(230, 230, 230);
+
+        &:hover {
+          color: rgb(200, 200, 200);
+        }
+      }
+    }
+  }
+}
