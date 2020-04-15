@@ -13,6 +13,6 @@ class PagesController < ApplicationController
     redirect_to home_path
   end
 
-  def mysettings
+  def settings
   end
 end
