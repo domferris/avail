@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :friendships, only: [:new, :create, :edit, :update, :destroy]
 
-  get '/settings', to: 'pages#mysettings', as: :mysettings
+  get '/settings', to: 'pages#settings', as: :settings
   patch '/toggle_availability', to: 'pages#toggle_availability', as: :toggle_availability
 
 end
